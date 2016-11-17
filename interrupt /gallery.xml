@@ -1,0 +1,70 @@
+<tiltviewergallery>
+	<photos>
+		<photo imageurl="images/8.png" linkurl="event.html#test8">
+			<title>Picturesque</title>
+			<description>
+				Aim . Focus . Shoot
+				Let your words be few
+				and your exposures be many..
+
+				We welcome you all to participate in the online photography contest conducted by INTERRUPT'16.
+				We provide you an opportunity where you could impress us with your skills...
+			</description>
+		</photo>
+		<photo imageurl="images/1.png" linkurl="event.html#test1">
+			<title>Code Ninja</title>
+			<description>
+				Brace yourself for the most exciting event as we unravel the mysteries of two of the most popular programming languages, C and C++! If you are good at it, there is no better place for you than at this event- Code Ninja.
+				It’s time to showcase your coding skills while we take you through challenging rounds. Solve the puzzles and crack the code to find your way to glory.
+			</description>
+		</photo>
+		<photo imageurl="images/2.png" linkurl="event.html#test2">
+			<title>Game of Archives</title>
+			<description>
+				Here’s an opportunity you wouldn’t want to miss! Put your database skills to the best use and show who’s the boss. Create tables that could change the way we perceive and extract information. Normalize your data to achieve supreme efficiency. The game is going to be an intense one. Are you ready to battle it out in a game of archives? Come, show it at Interrupt!
+			</description>
+		</photo>
+		<photo imageurl="images/3.png" linkurl="event.html#test3">
+			<title>Data De-queue</title>
+		<description>
+			What is data? Is it letters? Is it numbers? Is it a combination of both? Or is it something completely abstract? Well, everything counts as data.
+			If you can do that, then can you translate those diagrams into segments of code?
+			Come and try your hand at the data structures event.
+		</description>
+		</photo>
+		<photo imageurl="images/4.png" linkurl="event.html#test4">
+			<title>Don of Logic</title>
+			<description>
+				Do you have what it takes to survive against a wild bear if you just have just a blanket,a broomstick and an ice-cream sandwich on you? Can you de-code cryptic messages and come up with an algorithm to save the day? Are you better than others at lateral thinking?
+				If your answer to the above questions are yes,then only one thing remains to be decided. Are you worthy?
+			</description>
+		</photo>
+		<photo imageurl="images/5.png" linkurl="event.html#test5">
+			<title>MYB v4.0</title>
+			<description>
+				It’s that time of the year when mid-season sales pop up. As brands go all out, marketing their product, you fall prey to buying the 500th pair of ripped jeans, which you might not need, only because of the innumerable times that you watched the advertisement on television.
+				If you think you do, we would say come and show us at MYB event at Interrupt!
+			</description>
+		</photo>
+		<photo imageurl="images/6.png" linkurl="event.html#test6">
+			<title>Code Sprint</title>
+			<description>
+			</description>
+		</photo>
+		<photo imageurl="images/7.png" linkurl="event.html#test7">
+			<title>Cognition Quest</title>
+			<description>
+				Do you ponder upon intricacies while learning about technology? Do you search for solutions to the problems of this gadget dependent world? Do you dream of joining that elite league of the innovators? If so, then collate your ideas into a presentation, collaborate with a like minded person and come showcase it at Interrupt!
+			</description>
+		</photo>
+
+		<photo imageurl="images/9.png" linkurl="event.html#test9">
+			<title>Quizzler</title>
+			<description>
+				The quintessential geek is defined by the thick, round glasses and frequent usage of big technical words like “Architectural Neutral Distribution Format “. Sounds familiar?
+				Are you willing to fight it out in a buzzer induced frenzy? Are you ready to be questioned on anything under the sun? (Or cloud, pun intended)!
+			</description>
+		</photo>
+
+	</photos>
+</tiltviewergallery>

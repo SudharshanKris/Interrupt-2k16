@@ -1,0 +1,65 @@
+#top_content{
+  padding-bottom: 0%;
+}
+
+.IntroHeadings{
+  color: #000000;
+  padding: 1%;
+  line-height: 125%;
+  opacity: 1;
+}
+
+.slideInDown{
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+#BusIcon{
+  margin-left: 45%;
+  padding: 3%;
+  color: #000000;
+}
+
+.nav2{
+  width: 140px;
+  position: relative;
+  left: -3%;
+}
+
+.nav2:focus{
+  width: 140px;
+  color: #ffffff;
+  background-color: #222222;
+  border-color: #222222; 
+}
+
+.well-lg{
+  width: 60%;
+  margin-left: 20%;
+  border-radius: 0%;
+  margin-top: 5%;
+  padding-bottom: 0%;
+}
+
+.SearchBox{
+  text-align: center;
+} 
+
+#EventsBackground{
+  padding-top: 1%;
+}
+
+#MapSpace{
+  width: 100%;
+  margin-top: 3%;
+}
+
+#Map{
+  height: 100px;
+}
+
+#MapIcon{
+  color: #000000;
+  position: relative;
+  left: 47%;
+}

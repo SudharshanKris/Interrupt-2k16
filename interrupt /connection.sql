@@ -1,0 +1,425 @@
+-- phpMyAdmin SQL Dump
+-- version 4.5.4.1deb2ubuntu2
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Oct 02, 2016 at 01:18 PM
+-- Server version: 5.7.13-0ubuntu0.16.04.2
+-- PHP Version: 7.0.8-0ubuntu0.16.04.2
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `connection`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `conn_quesion`
+--
+
+CREATE TABLE `conn_quesion` (
+  `id` int(11) NOT NULL,
+  `pic` varchar(200) NOT NULL,
+  `hint` varchar(200) NOT NULL,
+  `answer` varchar(200) NOT NULL,
+  `level` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `conn_quesion`
+--
+
+INSERT INTO `conn_quesion` (`id`, `pic`, `hint`, `answer`, `level`) VALUES
+(1, '1-1.png', 'open source front end web framework', 'BOOTSTRAP', 1),
+(2, '1-2.jpg', 'an e-commerce platform', 'AMAZON', 1),
+(3, '1-3.png', '5 clues 1 word', 'LIBRARY', 1),
+(4, '1-4.jpg', 'programming language', 'PERL', 1),
+(5, '1-5.jpg', 'Online auction service used to buy and sell items', 'EBAY', 1),
+(6, '2-1.png', 'AN APPLICATION TO ACCESS INFORMATION ON THE WORLD WIDE WEB', 'BROWSER', 2),
+(7, '2-2.png', 'Scramble-AN OS USED IN SMARTPHONES AND TABLETS', 'ANDROID', 2),
+(8, '2-3.jpg', 'A QUOTE BY STEVE JOBS', 'INNOVATION', 2),
+(9, '2-4.jpg', 'AN OPERATING SYSTEM', 'KALILINUX', 2),
+(10, '2-5.jpg', 'A SOCIAL NETWORKING SERVICE', 'LINKEDIN', 2),
+(11, '3-1.jpg', 'IT GIVES RISE TO AN ERRONEOUS PROGRAM', 'BUG', 3),
+(12, '3-2.jpg', 'AN ECOMMERCE PLATFORM', 'FLIPKART', 3),
+(13, '3-3.jpg', 'common suffix?', 'WARE', 3),
+(14, '3-4.png', '-nil-', 'WINDOWS', 3),
+(15, '3-5.jpg', 'A WEB PORTAL AND A SEARCH ENGINE', 'YAHOO', 3),
+(16, '4-1.jpg', '-nil-', 'BEST', 4),
+(17, '4-2.jpg', 'OPEN SOURCE WEB SERVER', 'APACHE TOMCAT', 4),
+(18, '4-3.png', 'hardware or software that enables oneÂ computerÂ system to behave like anotherÂ computerÂ system', 'EMULATOR', 4),
+(19, '4-4.jpg', 'what\'s the common word', 'SPACE', 4),
+(20, '4-5.png', 'A DEVICE USED FOR CONNECTING SIMILAR NETWORKS', 'BRIDGE', 4),
+(21, '5-1.jpg', 'TRANSACTIONS THAT TAKE PLACE OVER THE WWW', 'ECOMMERCE', 5),
+(22, '5-2.jpg', 'USED TO READ INPUT eg: LIGHTS,SENSOR', 'ARDUINO', 5),
+(23, '5-3.png', 'A QUOTE BY ALAN TURING', 'HUMAN', 5),
+(24, '5-4.jpg', 'what\'s the common word', 'NET', 5),
+(25, '5-5.png', '-nil-', 'SCHEDULING', 5),
+(26, '6-1.jpg', 'web browser', 'Firefox', 6),
+(27, '6-2.jpg', 'dynamic programming language', 'python', 6),
+(28, '6-3.png', 'a networking technology', 'Ethernet', 6),
+(29, '6-4.jpg', 'a kind of self-balancing binary searchÂ tree', 'red black tree', 6),
+(30, '6-5.png', 'what\'s the common word', 'base', 6),
+(31, '7-1.jpg', 'amount of data that can be transmitted in a fixed amount of time', 'bandwidth', 7),
+(32, '7-2.png', 'Steve Jobs', 'foolish', 7),
+(33, '7-3.jpg', 'facilitate quick access to the Web page', 'bookmark', 7),
+(34, '7-4.jpg', 'a data structure', 'binary heap', 7),
+(35, '7-5.png', 'what\'s the common word', 'cloud', 7),
+(36, '8-1.jpg', 'complete and self-contained program that helps the user complete a task', 'application', 8),
+(37, '8-2.png', 'pillars of OOPS', 'inheritance', 8),
+(38, '8-3.jpg', 'node based data structure', 'binary search tree', 8),
+(39, '8-4.png', 'what\'s the common word', 'face', 8),
+(40, '8-5.jpg', 'A type of data transmission', 'baseband', 8),
+(41, '9-1.jpg', 'an approach to combine top downÂ testingÂ with bottom up testing', 'sandwich test', 9),
+(42, '9-2.png', 'Sergey Brin', 'google', 9),
+(43, '9-3.jpg', 'unit of digital information', 'byte', 9),
+(44, '9-4.png', '-nil-', 'algorithm', 9),
+(45, '9-5.jpg', 'algorithm for finding all (or some) solutions to some computational problems', 'backtracking', 9),
+(46, '10-1.png', 'file server software developed by Apple', 'apple share', 10),
+(47, '10-2.png', 'Satya Nadella', 'innovation', 10),
+(48, '10-3.png', '-nil-', 'architecture', 10),
+(49, '10-4.jpg', ' a linear data structure', 'circular queue', 10),
+(50, '10-5.png', 'term related to c++ programs', 'operator', 10),
+(51, '11-1.png', 'Range of frequencies', 'BANDWIDTH', 11),
+(52, '11-2.jpg', 'A device used as a printer', 'daisy wheel', 11),
+(53, '11-3.jpg', 'A cloud storage provider', 'Dropbox', 11),
+(54, '11-4.jpg', 'Online auction service used to buy and sell', 'Ebay', 11),
+(55, '11-5.jpg', 'A type of encoding scheme', 'Manchester', 11),
+(56, '12-1.PNG', 'An object oriented programming language', 'C#', 12),
+(57, '12-2.jpg', 'Software utility used to test the reachability of a host', 'Ping', 12),
+(58, '12-3.jpg', 'the fraudulent practice of sending emails', 'Phishing', 12),
+(59, '12-4.png', 'A method of communication', 'Language', 12),
+(60, '12-5.png', 'Types of computer virus', 'Polymorphic', 12),
+(61, '13-1.jpg', 'An object oriented programming language', 'Fabric', 13),
+(62, '13-2.jpg', 'Illegal use of software', 'Piracy', 13),
+(63, '13-3.png', 'A programming language', 'Ruby', 13),
+(64, '13-4.jpg', 'It is an engineering transport protocol i.e protection against wrapped sequence numbers', 'Paws', 13),
+(65, '13-5.PNG', 'A quote by Dennis Ritchie', 'Unix', 13),
+(66, '14-1.PNG', 'List of items', 'Catalog', 14),
+(67, '14-2.png', 'Program running as a background process', 'Daemon', 14),
+(68, '14-3.jpg', 'It adds peer to peer session control (signalling) for multimedia', 'Jingle protocol', 14),
+(69, '14-4.PNG', 'Looks at all parts of something carefully in order to detect some feature', 'Scan', 14),
+(70, '14-5.jpg', 'Troy', 'Trojan horse', 14),
+(71, '15-1.jpg', 'A collection of infrequently accessed data', 'Archive', 15),
+(72, '15-2.jpg', 'A dynamic binary translator ', 'Rosetta', 15),
+(73, '15-3.PNG', 'A quote by Bill Gates', 'Nerds', 15),
+(74, '15-4.jpg', 'Apple computer', 'Macintosh', 15),
+(75, '15-5.png', 'Guess the word', 'Torrent', 15),
+(76, '16-1.png', 'Guess the word', 'Assembler', 16),
+(77, '16-2.png', 'Programming practice (software or game development ) by amateurs', 'Bedroom Programming', 16),
+(78, '16-3.png', 'a server that acts as an intermediary to respond to client’s requests', 'proxy', 16),
+(79, '16-4.jpg', 'A place where data is stored temporarily', 'Buffer', 16),
+(80, '16-5.png', 'Interconnection of things', 'Network', 16),
+(81, '17-1.png', 'First piece of code', 'Bootstrapping', 17),
+(82, '17-2.jpg', 'Connects similar networks', 'Bridge', 17),
+(83, '17-3.jpg', 'Guess the common word', 'space', 17),
+(84, '17-4.png', 'Stores all the data of an organisation', 'Warehouse', 17),
+(85, '17-5.png', 'Guess the word', 'Windows', 17),
+(86, '18-1.png', 'A software that requires a lot of resources', 'Bloatware', 18),
+(87, '18-2.png', 'low-level software that supports a computer\'s basic functions', 'operating system', 18),
+(88, '18-3.jpg', 'Basic unit of an image', 'Pixel', 18),
+(89, '18-4.png', 'Keywords in C++', 'short', 18),
+(90, '18-5.png', 'Guess the word', 'Wildcat', 18),
+(91, '19-1.png', 'The term that refers to fancy features provided by an application', 'Bells and Whistles', 19),
+(92, '19-2.png', 'It is one of the software design strategies', 'Bottom up design', 19),
+(93, '19-3.png', 'Number of pixels contained on a monitor', 'Resolution', 19),
+(94, '19-4.jpg', 'Guess the common word', 'Link', 19),
+(95, '19-5.png', 'Guess the word', 'Virtual Reality', 19),
+(96, '20-1.png', 'New versions compatible with older versions', 'Backward compatible', 20),
+(97, '20-2.png', 'Facilitates inheritance', 'Base class', 20),
+(98, '20-3.png', 'A part of a larger network', 'Subnet', 20),
+(99, '20-4.jpg', 'A technology used for simulation', 'Virtual Reality', 20),
+(100, '20-5.png', 'Guess the word', 'Warehouse', 20),
+(101, '21-1.jpg', 'what are these?', 'google apps', 21),
+(102, '21-2.jpg', 'An open source Java persistence framework', 'Hibernate', 21),
+(103, '21-3.jpg', 'Social media sites to which a user makes short & frequent posts', 'MIcroblog', 21),
+(104, '21-4.png', 'Guess the word', 'trigger', 21),
+(105, '21-5.jpg', 'a content management system', 'wordpress', 21),
+(106, '22-1.jpg', 'converts low level language to machine code', 'Assembler', 22),
+(107, '22-2.jpg', 'An android version', 'Ice cream sandwich', 22),
+(108, '22-3.jpg', 'an e-commerce platform', 'indiatimes', 22),
+(109, '22-4.png', 'Guess the word', 'Function', 22),
+(110, '22-5.jpg', 'platform for video sharing', 'vine', 22),
+(111, '23-1.jpg', 'connection oriented public packet switched network', 'Frame Relay', 23),
+(112, '23-2.png', 'apps by google', 'hangouts', 23),
+(113, '23-3.jpg', 'a social media site', 'pinterest', 23),
+(114, '23-4.PNG', 'a code by Tim Berners- Lee', 'World Wide Web', 23),
+(115, '23-5.jpg', 'a session conducted over the web', 'webinar', 23),
+(116, '24-1.jpg', 'a content distribution protocol', 'bit torrent', 24),
+(117, '24-2.jpg', 'a language that is converted into machine language', 'assembly language', 24),
+(118, '24-3.jpg', 'process of communicating', 'chat', 24),
+(119, '24-4.PNG', 'Common Suffix', 'Heap', 24),
+(120, '24-5.jpg', 'A person who breaks into a system with malicious intent', 'Cracker', 24),
+(121, '25-1.jpg', 'Common Suffix', 'Net', 25),
+(122, '25-2.jpg', 'Collective information about a body', 'Portal', 25),
+(123, '25-3.jpg', 'Current information', 'Status', 25),
+(124, '25-4.png', 'A highly skilled computer expert', 'Hacker', 25),
+(125, '25-5.PNG', 'A tiny piece of a semi-conductive material', 'Chip', 25),
+(126, '26-1.jpg', 'Inter operable implementation', 'Wimax', 26),
+(127, '26-2.PNG', 'Packet of information that travels between the browser and the web server', 'Cookies', 26),
+(128, '26-3.JPG', 'Enables information to be seen', 'Display', 26),
+(129, '26-4.JPG', 'A message provided by the OS ', 'Prompt', 26),
+(130, '26-5.png', 'A Quote by Dennis M Ritche', 'C', 26),
+(131, '27-1.JPG', 'Returns nothing ', 'Void', 27),
+(132, '27-2.jpg', 'A point access method ', 'Grid File', 27),
+(133, '27-3.PNG', 'A Quote by Mark Zuckerberg', 'Transparent', 27),
+(134, '27-4.JPG', 'Multi paradigm programming language', 'Curry', 27),
+(135, '27-5.JPG', 'A scheme in computer programming for resolving hash collisions of values of hash functions in a table', 'Cuckoo hashing', 27),
+(136, '28-1.png', 'A software that is no longer being sold or supported by its publisher', 'Abandonware', 28),
+(137, '28-2.jpg', 'A device used for conversion', 'Adapter', 28),
+(138, '28-3.png', 'A type of data transmission', 'Broadband', 28),
+(139, '28-4.PNG', 'Common Suffix', 'mail', 28),
+(140, '28-5.png', 'Guess the word', 'Multitasking', 28),
+(141, '29-1.png', 'A scripting language', 'Action Script', 29),
+(142, '29-2.JPG', 'A program that loads an OS when the Computer starts', 'BootLoader', 29),
+(143, '29-3.jpg', 'A controlling panel', 'Console', 29),
+(144, '29-4.PNG', 'Common Suffix', 'Mac', 29),
+(145, '29-5.png', 'Guess the word', 'Redundant', 29),
+(146, '30-1.png', 'A collection of programs and their instruction manuals', 'application package', 30),
+(147, '30-2.jpg', 'Most commonly used for illegal data sharing', 'Darknet', 30),
+(148, '30-3.jpg', 'Facial Expressions', 'Emoticon', 30),
+(149, '30-4.PNG', 'Common Suffix', 'Gram', 30),
+(150, '30-5.png', 'Guess the word', 'Script', 30),
+(151, '31-1.JPG', 'any software used for the creation of weblogs', 'blogware', 31),
+(152, '31-2.PNG', 'Chad Hurley', 'youtube', 31),
+(153, '31-3.JPG', 'connecting two or more computers together', 'clustering', 31),
+(154, '31-4.PNG', 'find the common word', 'sort', 31),
+(155, '31-5.JPG', 'acts on one', 'unary operator', 31),
+(156, '32-1.jpg', 'find the word', '.net', 32),
+(157, '32-2.PNG', 'guess the common word', 'script', 32),
+(158, '32-3.jpg', 'a set of networking protocols by apple', 'apple talk', 32),
+(159, '32-4.png', 'guess the word', 'client', 32),
+(160, '32-5.jpg', 'guess the word', 'frame', 32),
+(161, '33-1.png', 'wrapping into one unit', 'encapsulation', 33),
+(162, '33-2.jpg', 'A computer networking technology', 'Ethernet', 33),
+(163, '33-3.png', 'guess the word', 'domain', 33),
+(164, '33-4.JPG', 'a programming language derived from Lisp', 'Racket', 33),
+(165, '33-5.PNG', 'guess the common word', 'text', 33),
+(166, '34-1.JPG', 'a system where software applications run in an environment composed of utility cloud services', 'cloud platform', 34),
+(167, '34-2.JPG', 'repeated application', 'recursion', 34),
+(168, '34-3.png', 'guess the word', 'database', 34),
+(169, '34-4.JPG', 'a software framework developed by microsoft', 'windows.net', 34),
+(170, '34-5.JPG', 'programming language', 'scala', 34),
+(171, '35-1.jpg', 'it is a super set of a scripting language', 'icedcoffee script', 35),
+(172, '35-2.JPG', 'a programming language', 'shell', 35),
+(173, '35-3.JPG', 'a procedure performed by terminals to verify that communication has been correctly established', 'handshaking', 35),
+(174, '35-4.PNG', 'an edit command', 'copy', 35),
+(175, '35-5.png', 'a quote by Steve Jobs', 'code', 35),
+(176, '36-1.png', 'A term related to computer network', 'PEERS', 36),
+(177, '36-2.JPG', 'An agreement that governs the procedures used to exchange information', 'PROTOCOL', 36),
+(178, '36-3.JPG', 'A single computer instruction that stands for a given sequence of instruction', 'Macro', 36),
+(179, '36-4.PNG', 'An electronic meeting place dedicated to a particular subject where users come to participate in discussions.', 'Conference', 36),
+(180, '36-5.png', 'A quote by Friedrich Bauer', 'Software Engineering', 36),
+(181, '37-1.PNG', 'See nickname', 'Alias', 37),
+(182, '37-2.JPG', 'A device that is a center of network activity because if connects multiple networks together.', 'Hub', 37),
+(183, '37-3.JPG', 'A tool', 'Erase', 37),
+(184, '37-4,png', 'Alfred V.Aho', 'Algorithm', 37),
+(185, '37-5.png', 'Roy Osherore', 'Tests', 37),
+(186, '38-1.jpg', 'A linear collection of data elements', 'Linked List', 38),
+(187, '38-2.png', 'Guess the word', 'Compiler', 38),
+(188, '38-3.png', 'Guess the common word', 'win', 38),
+(189, '38-4.jpg', 'Guess the word', 'Software', 38),
+(190, '38-5.jpg', 'A programming language', 'r', 38),
+(191, '39-1.jpg', 'Find the word', 'blueray', 39),
+(192, '39-2.jpg', 'Find the word', 'firewire', 39),
+(193, '39-3.png', 'Find the word', 'gesture', 39),
+(194, '39-4.png', 'Find the word', 'processor', 39),
+(195, '39-5.png', 'the phase before deployment', 'test', 39),
+(196, '40-1.jpg', 'Guess the word', 'Hierarchy file structure', 40),
+(197, '40-2.jpg', 'An android version', 'Honeycomb', 40),
+(198, '40-3.png', 'Guess the word', 'interface', 40),
+(199, '40-4.png', 'Host of an application', 'Platform', 40),
+(200, '40-5.png', 'Guess the word', 'Server', 40),
+(201, '41-1.PNG', 'Condition to occur in several forms', 'Polymorphism', 41),
+(202, '41-2.PNG', 'An Indian Multinational Information Tech', 'TCS', 41),
+(203, '41-3.PNG', 'Arranged according to the level of importance', 'hierarchy', 41),
+(204, '41-4.PNG', 'Series of instructions', 'Program', 41),
+(205, '41-5.PNG', 'Collection of internet sources', 'World Wide Web', 41),
+(206, '42-1.PNG', 'An Indian Multinational Information Tech', 'Infosys', 42),
+(207, '42-2.PNG', 'Collection of data', 'Database', 42),
+(208, '42-3.PNG', 'The collection of oct,dex and hex fields', 'Basefield', 42),
+(209, '42-4.PNG', 'Common format text files in computer', 'ASCII', 42),
+(210, '42-5.PNG', 'Provides input,output character from files', 'File Handling', 42),
+(211, '43-1.PNG', 'A set of rules to be followed', 'Algorithm', 43),
+(212, '43-2.PNG', 'General measure of Computing Performance', 'mips', 43),
+(213, '43-3.PNG', 'A member of its enclosing class', 'nested class', 43),
+(214, '43-4.PNG', 'Set of instruction in abbreviated format', 'Macro', 43),
+(215, '43-5.PNG', 'Defined by the IP address', 'Domain', 43),
+(216, '44-1.PNG', 'Device that communicates with the computer', 'Terminal', 44),
+(217, '44-2.PNG', 'it\'s a device to connect', 'switch', 44),
+(218, '44-3.PNG', 'Database that allows multiple users', 'Concurrency', 44),
+(219, '44-4.PNG', 'Memory Device', 'Pendrive', 44),
+(220, '44-5.PNG', 'Directory in C++', 'Iostream', 44),
+(221, '45-1.jpg', 'Special keys that have different meaning depending on the program that is running', 'Function Keys', 45),
+(222, '45-2.png', 'Guess the word', 'internet', 45),
+(223, '45-3.jpg', 'To Inundate a single address with mails', 'Mail Bomb', 45),
+(224, '45-4.jpg', 'An Instruction written in high level language', 'Statement', 45),
+(225, '45-5.jpg', 'A numerical computing environment', 'Matlab', 45);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `conn_user`
+--
+
+CREATE TABLE `conn_user` (
+  `id` int(11) NOT NULL,
+  `clevel` int(11) NOT NULL,
+  `cques` int(11) NOT NULL,
+  `score` int(11) NOT NULL,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `conn_user`
+--
+
+INSERT INTO `conn_user` (`id`, `clevel`, `cques`, `score`, `updated_at`) VALUES
+(12, 16, 3, 75, '2016-09-21 16:29:28'),
+(14, 36, 0, 175, '2016-09-26 14:03:21'),
+(15, 8, 4, 35, '2016-09-26 10:33:33'),
+(16, 11, 1, 50, '2016-09-20 08:10:17'),
+(17, 6, 2, 25, '2016-09-25 16:30:02'),
+(23, 4, 3, 15, '2016-09-24 11:51:19'),
+(31, 46, 0, 180, '2016-09-28 17:28:00'),
+(32, 41, 0, 200, '2016-09-27 00:16:44'),
+(35, 43, 4, 210, '2016-09-29 17:45:27'),
+(36, 1, 2, 0, '2016-09-25 06:29:21'),
+(53, 12, 3, 55, '2016-09-21 15:32:19'),
+(56, 11, 1, 50, '2016-09-22 16:18:09'),
+(59, 5, 3, 20, '2016-09-21 18:40:11'),
+(65, 1, 2, 0, '2016-09-26 05:34:40'),
+(72, 3, 0, 10, '2016-09-23 04:52:23'),
+(75, 11, 0, 50, '2016-09-19 19:00:48'),
+(92, 1, 2, 0, '2016-09-20 12:38:20'),
+(96, 1, 0, 0, '2016-09-22 08:43:35'),
+(98, 6, 4, 25, '2016-09-21 12:26:36'),
+(99, 8, 3, 35, '2016-09-21 17:30:02'),
+(100, 46, 0, 225, '2016-09-28 17:15:17'),
+(105, 25, 3, 120, '2016-09-24 17:04:57'),
+(107, 1, 2, 0, '2016-09-20 17:03:31'),
+(111, 43, 4, 210, '2016-09-29 17:45:15'),
+(114, 1, 1, 0, '2016-09-20 21:25:20'),
+(115, 9, 3, 40, '2016-10-01 13:56:11'),
+(119, 3, 3, 10, '2016-09-23 08:19:19'),
+(120, 3, 1, 10, '2016-09-21 12:02:18'),
+(129, 13, 1, 15, '2016-09-21 14:07:53'),
+(130, 31, 4, 150, '2016-09-26 16:11:29'),
+(137, 31, 0, 150, '2016-09-28 09:42:22'),
+(140, 8, 3, 35, '2016-09-22 13:14:34'),
+(141, 26, 0, 125, '2016-09-25 05:52:30'),
+(142, 1, 0, 0, '2016-09-22 16:00:10'),
+(145, 1, 2, 0, '2016-09-21 17:39:30'),
+(147, 5, 3, 20, '2016-09-21 18:32:03'),
+(149, 1, 1, 0, '2016-09-22 04:57:47'),
+(150, 21, 0, 100, '2016-09-22 06:19:45'),
+(151, 36, 0, 175, '2016-09-23 15:53:57'),
+(152, 5, 0, 20, '2016-09-27 07:22:10'),
+(153, 5, 0, 20, '2016-09-27 07:22:10'),
+(159, 23, 0, 110, '2016-09-24 09:31:27'),
+(161, 7, 3, 30, '2016-09-22 14:25:10'),
+(163, 1, 2, 0, '2016-09-22 14:12:46'),
+(164, 10, 2, 45, '2016-09-22 14:19:36'),
+(171, 13, 3, 60, '2016-09-29 13:52:42'),
+(173, 36, 0, 175, '2016-09-25 18:07:23'),
+(174, 5, 3, 20, '2016-09-25 09:10:05'),
+(177, 1, 2, 0, '2016-09-23 11:31:24'),
+(181, 24, 0, 115, '2016-09-26 09:57:14'),
+(182, 5, 3, 20, '2016-09-23 16:36:07'),
+(184, 38, 0, 185, '2016-09-28 15:44:13'),
+(186, 4, 3, 15, '2016-09-23 18:14:29'),
+(189, 14, 3, 65, '2016-09-29 06:50:03'),
+(190, 13, 4, 60, '2016-09-24 05:33:31'),
+(191, 4, 3, 15, '2016-09-24 05:25:47'),
+(192, 4, 3, 15, '2016-09-24 05:25:45'),
+(193, 5, 3, 20, '2016-09-24 06:23:26'),
+(202, 5, 0, 20, '2016-09-24 14:13:18'),
+(203, 7, 4, 30, '2016-09-26 14:16:22'),
+(215, 1, 2, 0, '2016-09-24 17:44:35'),
+(216, 1, 0, 0, '2016-09-24 18:01:35'),
+(222, 1, 2, 0, '2016-09-25 07:20:25'),
+(223, 1, 1, 0, '2016-09-25 07:44:17'),
+(225, 1, 2, 0, '2016-09-26 12:15:06'),
+(227, 11, 1, 50, '2016-09-25 14:24:12'),
+(228, 1, 2, 0, '2016-09-27 15:05:27'),
+(233, 5, 3, 20, '2016-09-27 06:19:13'),
+(235, 40, 0, 195, '2016-09-26 16:38:46'),
+(236, 40, 2, 195, '2016-09-29 04:38:29'),
+(239, 40, 0, 195, '2016-09-26 16:35:35'),
+(240, 5, 3, 20, '2016-09-26 07:01:52'),
+(241, 46, 0, 225, '2016-09-29 05:20:48'),
+(242, 33, 0, 160, '2016-09-26 19:06:48'),
+(243, 46, 0, 225, '2016-09-29 05:18:17'),
+(253, 46, 0, 225, '2016-09-29 05:18:17'),
+(255, 1, 0, 0, '2016-09-28 13:51:15'),
+(256, 6, 4, 25, '2016-09-30 15:00:01'),
+(258, 13, 0, 60, '2016-09-28 03:57:12'),
+(267, 8, 3, 35, '2016-09-30 16:41:12'),
+(269, 1, 2, 0, '2016-09-28 07:01:31'),
+(278, 3, 0, 10, '2016-09-26 17:08:13'),
+(291, 1, 2, 0, '2016-09-27 16:03:40'),
+(293, 5, 3, 20, '2016-09-27 16:00:07'),
+(298, 5, 3, 20, '2016-09-27 05:41:18'),
+(304, 6, 4, 25, '2016-09-28 06:47:50'),
+(310, 5, 0, 20, '2016-09-27 07:49:35'),
+(311, 1, 1, 0, '2016-09-27 12:52:39'),
+(316, 1, 1, 0, '2016-09-27 14:03:48'),
+(327, 2, 3, 5, '2016-09-28 16:52:02'),
+(334, 1, 1, 0, '2016-09-28 17:25:01'),
+(342, 1, 2, 0, '2016-09-30 15:33:43'),
+(344, 3, 3, 10, '2016-09-27 18:57:27'),
+(355, 1, 1, 0, '2016-09-30 12:57:20'),
+(357, 1, 0, 0, '2016-09-28 05:46:54'),
+(360, 1, 2, 0, '2016-09-28 17:09:20'),
+(362, 1, 0, 0, '2016-09-28 14:20:30'),
+(374, 1, 2, 0, '2016-09-28 16:46:47'),
+(385, 10, 2, 45, '2016-09-29 13:33:38'),
+(396, 5, 3, 20, '2016-09-29 09:17:34'),
+(402, 1, 0, 0, '2016-09-29 11:31:27'),
+(408, 1, 1, 0, '2016-09-29 17:12:06'),
+(411, 1, 2, 0, '2016-10-01 01:28:14'),
+(413, 1, 2, 0, '2016-09-29 15:02:33'),
+(418, 1, 2, 0, '2016-09-29 18:31:34'),
+(431, 47, 0, 230, '2016-09-30 09:30:56'),
+(448, 10, 2, 45, '2016-09-30 17:10:32'),
+(470, 1, 1, 0, '2016-09-30 18:04:23'),
+(471, 1, 1, 0, '2016-09-30 18:14:00');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `conn_quesion`
+--
+ALTER TABLE `conn_quesion`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `conn_user`
+--
+ALTER TABLE `conn_user`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `conn_quesion`
+--
+ALTER TABLE `conn_quesion`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=226;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

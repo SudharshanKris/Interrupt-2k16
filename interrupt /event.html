@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Events &middot; Interrupt '16</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="login/css/roboto.min.css" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <link href="login/animate.css" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Compiled and minified JavaScript -->
+
+    <link href="login/css/styles.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-66382440-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script type="text/javascript" src="login/jquery-scrolltofixed.js"></script>
+    <script type="text/javascript" src="login/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="login/jquery.isotope.js"></script>
+    <script type="text/javascript" src="login/wow.js"></script>
+    <script type="text/javascript" src="login/modernizr.custom.46884.js"></script>
+    <!--<script type="text/javascript" src="login/scripts.js"></script>-->
+    <script type="text/javascript" src="login/animatescroll.js"></script>
+    <script type="text/javascript">
+
+    </script>
+    <style>
+        body{padding-top:50px}#banner{border-bottom:none}.page-header h1{font-size:4em}.bs-docs-section{margin-top:8em}.bs-component{position:relative}.bs-component .modal{position:relative;top:auto;right:auto;left:auto;bottom:auto;z-index:1;display:block}.bs-component .modal-dialog{width:90%}.bs-component .popover{position:relative;display:inline-block;width:220px;margin:20px}#source-button{position:absolute;top:0;right:0;z-index:100;font-weight:bold;padding: 5px 10px;}.progress{margin-bottom:10px}footer{margin:5em 0}footer li{float:left;margin-right:1.5em;margin-bottom:1.5em}footer p{clear:left;margin-bottom:0}.splash{padding:4em 0 0;background-color:#141d27;color:#fff;text-align:center}.splash h1{font-size:4em}.splash #social{margin:2em 0}.splash .alert{margin:2em 0}.section-tout{padding:4em 0 3em;border-bottom:1px solid rgba(0,0,0,0.05);background-color:#eaf1f1}.section-tout .fa{margin-right:.5em}.section-tout p{margin-bottom:3em}.section-preview{padding:4em 0 4em}.section-preview .preview{margin-bottom:4em;background-color:#eaf1f1}.section-preview .preview .image{position:relative}.section-preview .preview .image:before{box-shadow:inset 0 0 0 1px rgba(0,0,0,0.1);position:absolute;top:0;left:0;width:100%;height:100%;content:"";pointer-events:none}.section-preview .preview .options{padding:1em 2em 2em;border:1px solid rgba(0,0,0,0.05);border-top:none;text-align:center}.section-preview .preview .options p{margin-bottom:2em}.section-preview .dropdown-menu{text-align:left}.section-preview .lead{margin-bottom:2em}@media (max-width:767px){.section-preview .image img{width:100%}}.sponsor{text-align:center}.sponsor a:hover{text-decoration:none}@media (max-width:767px){#banner{margin-bottom:2em;text-align:center}}
+        .infobox .btn-sup { color: rgba(0,0,0,0.5); font-weight: bold; font-size: 15px; line-height: 30px; }
+        .infobox .btn-sup img { opacity: 0.5; height: 30px;}
+        .infobox .btn-sup span { padding-left: 10px; position: relative; top: 2px; }
+        .icons-material .row { margin-bottom: 20px; }
+        .icons-material .col-xs-2 { text-align: center; }
+        .icons-material i { font-size: 34pt; }
+
+        .icon-preview {
+            display: inline-block;
+            padding: 10px;
+            margin: 10px;
+            background: #D5D5D5;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .icon-preview span {
+            display: none;
+            position: absolute;
+            background: black;
+            color: #EEE;
+            padding: 5px 8px;
+            font-size: 15px;
+            font-family: Roboto;
+            border-radius: 2px;
+            z-index: 10;
+        }
+        .icon-preview:hover i { color: #4285f4; }
+        .icon-preview:hover span { display: block; cursor: text; }
+
+    </style>
+    <style>
+        .keez:hover {
+            opacity: 0;
+            transition: opacity .70s ease-in-out;
+            -moz-transition: opacity .70s ease-in-out;
+            -webkit-transition: opacity .70s ease-in-out;
+        }
+        .keez {
+            opacity: 1.0;
+            transition: opacity .70s ease-in-out;
+            -moz-transition: opacity .70s ease-in-out;
+            -webkit-transition: opacity .70s ease-in-out;
+        }
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container">
+    <div class="text-center">
+        <div class="wow animated slideInDown" data-wow-delay="300ms">
+            <img  src="img/int.png" class="center-block rotart" height="150px" width="150px">
+        </div>
+    </div>
+    <div class="wow delay-04s animated slideInUp "data-wow-delay="1200ms">
+        <a href="index.php" style="text-decoration:none !important;"><h2 id="keek" class="text-center" style="text-transform: uppercase !important; text-decoration:none !important; font-size: 60px;  color:#009688; font-weight: 400;">Interrupt '16</h2></a>
+    </div>
+</div>
+<hr>
+<div class="container">
+    <div class="text-center">
+    <a href="index.php" class="waves-effect waves-light btn text-center"><i class="fa fa-home fa-5x" style="font-size: 2.3rem;" aria-hidden="true"></i> </a>
+        </div>
+    <h2 class="teal-text text-center">Events Description</h2>
+    <h4 class="teal-text text-center"><i>(Swipe the icons right or left to view more events)</i></h4>
+</div>
+<div class="container hoverable" style="border-radius: 25px; border: 2px solid #009688;">
+    <div class="row">
+        <div class="col s12">
+            <ul class="tabs">
+                <li class="tab col s3"><a style="color: #00897b !important;" href="#test1"><i class="fa fa-2x fa-star-half-o fa-spin" aria-hidden="true"></i></a></li>
+                <li class="tab col s3"><a style="color: #00897b !important;" href="#test2"><i class="fa fa-database fa-2x" aria-hidden="true"></i></a></li>
+                <li class="tab col s3"><a style="color: #00897b !important;" href="#test3"><i class="fa fa-2x fa-stack-overflow" aria-hidden="true"></i></a></li>
+                <li class="tab col s3"><a style="color: #00897b !important;" href="#test4"><i class="fa fa-2x fa-gears" aria-hidden="true"></i></a></li>
+                <li class="tab col s3"><a style="color: #00897b !important;" href="#test5"><i class="fa fa-2x fa-bullhorn" aria-hidden="true"></i></i></a></li>
+                <li class="tab col s3"><a style="color: #00897b !important;" href="#test6"><i class="fa fa-2x fa-terminal" aria-hidden="true"></i></a></li>
+                <li class="tab col s3"><a style="color: #00897b !important;" href="#test7"><i class="fa fa-2x fa-file-text-o" aria-hidden="true"></i></a></li>
+                <li class="tab col s3"><a style="color: #00897b !important;" href="#test8"><i class="fa fa-2x fa-camera-retro" aria-hidden="true"></i></a></li>
+                <li class="tab col s3"><a style="color: #00897b !important;" href="#test9"><i class="fa fa-2x fa-question" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+        <div id="test1" class="col s12">
+            <br>
+            <h2 class="text-center">CODE NINJA</h2>
+            <p class="flow-text left-align thin">
+             <br>
+Brace yourself for an exciting event as we unravel the mysteries of two of the most popular programming languages, C and C++! If you're a coder, there is no better place for you than Code Ninja!
+
+<br>
+It's time to showcase your coding skills while we take you through the rounds. Solve puzzles and crack code to find your way to glory!
+                
+<br>
+                <br><b>Round 1</b><br>
+The first round consists of objective type questions related to the concepts of C and C++. Choose the correct option or enter the answers to the questions in the space provided. Get a top score to slide into Round 2!<br>
+               <br> <b>Round 2</b>
+              
+<br>
+ Participants will recieve 15 questions, 5 easy, 5 medium and 5 hard and a challenge question. This round is flexible, participants get to choose  the questions that they have to solve and the number of questions that they have to solve.
+<br>
+Participants are scored as follows:
+<ul class="flow-text left-align thin">
+<li>Easy-20</li>
+<li>Medium-30</li>
+<li>Hard-50</li>
+<li>Challenge-100</li>
+</ul>
+<span class="flow-text left-align thin">
+The first participant/team to reach 100 points wins!<br><br>
+                <b>Rules</b><br>
+                1)You may code in C or Java only.<br>
+                2)You may participate as team of two or alone.<br>
+                3)The decision of the coordinators is final.<br>
+</span>
+            </p>
+        </div>
+        <div id="test2" class="col s12">
+            <br>
+
+            <h2 class="text-center">GAME OF ARCHIVES</h2>
+            <p class="flow-text left-align thin">
+                Imagine you're watching an episode of Sherlock. What happens in every case? Evidence and red herrings pop up willy-nilly and we try to solve the case along with Sherlock and Watson. In the end, you'd have noticed what cracks the case would be the seemingly harmless scribble on the book which lies open during the murder. Every piece of information provides clues to the most complex problems.
+
+<br>
+Recorded details of the past prove to be the ultimate evidence for the present. Tables are a tool and an archive is a library of data. Do you have what it takes to become a DBA?
+
+                <br>
+                Here's an opportunity you wouldn't want to miss! Put your database skills to the test and show us who's boss! Create tables that could change the way we perceive and extract information. Normalize your data to achieve supreme efficiency. This game is going to be intense!!  
+<br>
+                <br>
+                <b>Round 1: Query Round</b><br>
+This is the qualifying round that takes place on site. Just write some queries and you could be part of the epic battle!
+
+<br>
+                <br>
+            <b>Round 2: Scenario Round</b><br>
+Here's where the real challenge lies! Create an apt database for the scenario we give you and add some of your own personal pizazz to it! 
+             <br>  <br>
+<b>Rules</b><br>
+1.	Basic knowledge of MySQL queries is expected (select, insert, create, etc.). Knowledge of higher concepts would be appreciated.<br>
+2.	This is a team event.  A team of 2 is required to take part in this event.<br>
+3.	Round 2 will be solely judged on how relevant the content of your tables is with the given scenario. <br>
+
+            <br>
+            
+
+            
+
+            </p>
+        </div>
+        <div id="test3" class="col s12">
+            <br>
+            <h2 class="text-center">DATA DE-QUEUE</h2>
+            <p class="flow-text left-align thin">
+                <br>
+What is data? Is it letters? Is it numbers? Is it a combination of both? Or is it something completely abstract? Everything, right from alphabets to copies of the Oxford dictionary, from the number of times your cat sneezed, to the cat videos on YouTube, is data! 
+<br>
+So how do we store all this data?
+<br>                
+Does your brain automatically link nodes in the form of lists or do you prefer your data is the neat branches of a tree? Can you translate those diagrams into segments of code? Put those hours you spent on CodeChef and HackerRank to use at Data D-Queue!
+<br>
+<br>
+<br> <b>Round 1</b><br>
+20 minute, 20 questions. Simple. Qualifiers will move on to Round 2!
+ <br>
+ <br><b>Round 2</b><br>
+ Data structure based programming round.
+<br>
+<br>
+<b>Rules</b><br>
+1)You may code in C or Java only.<br>
+2)You may participate as team of two or alone. <br>
+3)The decision of the coordinators is final.<br>
+<br>
+</p>
+</div>
+<div id="test4" class="col s12">
+<br>
+<h2 class="text-center">DON OF LOGIC</h2>
+<p class="flow-text left-align thin">
+How would  you survive against a wild bear if you just have just a blanket, a broomstick and an ice-cream sandwich? Can you decrypt coded messages? Can you come up with algorithms on the fly to save the day? 
+
+<br><br>
+If your answer to any of the above questions is yes, then only one thing remains to be decided. Are you worthy of being the Don of Logic?
+<br>
+<br>
+<b>Round 1: Written Test</b><br>
+You have 30 minutes to answer 20 lateral thinking questions. 16 possible Dons will move to the next round. 
+<br>
+<br>
+<b>Round 2: Quiz</b><br>
+Each Don-hopeful is given 5 cards. The card will have a daily household object like a blanket or a broomstick. There is one special (Wild) card, which has all the objects (Tools). 
+The quiz master poses a survival question, and each player has to take out an answer card and place it face down. Once all the players have done so, each player has to show what tool they used and how they used that tool. Only if the explanation is correct will the player be awarded a point. Each player will now be given a new card (can be any tool) from the pack.
+The first six players to reach 13 points advance to the final round.
+<br>
+The first six players to reach 13 points advance to the final round.<br>
+               
+
+<b>Round 3: Coding with a twist</b><br>
+Finalists will be given a question and 45 minutes to write, compile and execute a simple program the answers the question. The program can be written in C or C++ as per the participant’s choice. The winner of this round is the of Don Of Logic! <br>
+                <br>
+
+            </p>
+        </div>
+        <div id="test5" class="col s12">
+            <br>
+            <h2 class="text-center">MYB v4.0</h2>
+            <p class="flow-text left-align thin">
+
+It's that time of the year again, mid-season sales everywhere as brands go all out, marketing their product and you fall prey to what will become your 500th pair of ripped jeans only because of the innumerable ads on television. This is probably the case with everyone, but are you one of the few who can convince people into buying a product? Do you have the skills to lure customers into choosing your product? Do you have the gift of the gab? 
+                
+<br>
+If you think you do, come show us at Mind Your Business!  <br><br>
+<b>Round 1</b>
+<br>
+Write a written test to give us a glimpse into your personality and assure us of your logical and analytical skills<br>
+<br>
+<b>Round 2</b><br>
+We call this round 1-5-90. You will be given one word to describe to your teammates in 90 seconds. The thing is, we will also give your five words that you can't use in your description. You will lose points for using these restricted words.
+<br>
+<br>
+<b>Round 3</b><br>
+A team is given a product and are asked to come up with a sales pitch which cannot exceed 2 minutes. They must answer any questions about their product and their pitch till their customers are satisfied. The team with the most effective pitch wins.
+<br>
+ <br><b>Rules</b><br>
+                1)Two or three per team.<br>
+                2)The decisions made by the coordinators is final. <br>
+                <br>
+
+            </p>
+        </div>
+        <div id="test6" class="col s12">
+            <br>
+            <h2 class="text-center">CODE SPRINT</h2>
+            <p class="flow-text left-align thin">
+                <pre class="flow-text thin">Class FindWhatsOnYourMind{
+Enum StatesEveryday{
+	BORED, DOODLING, TEXTING, SLEEPING
+};
+Enum OnOCT1st{
+EXCITED, RUNNING, HAPPY, ENJOYING, ACTUALLY_LEARNING
+};
+String day,date,Venue;
+Public static void main( String [] args)
+{
+getDateDayLocation();/* write ui or something to get the date and venue*/
+try{
+if(Date != (depending  on how we get input)OCT1st)
+{
+/*choosing a random value from StatesEveryday*/
+StatesEveryday x= StatesEveryday.values()[newRandom().nextInt(StatesEveryday.values().length)];
+System.out.println(“I am”+x);
+}
+Else
+{
+throw new InterruptedException();
+}	}
+catch(InterruptedException e){
+ assert (Venu.equalsIgnoreCase(“svce”)) (“Must go to SVCE soon”);
+System.out.println(“Hah Yay, I am caught in the exceptional INTERRUPT”+ “ \n I am”);
+for(OnOCT1st o: OnOCT1st.values())
+{
+System.out.print(o+ “\t”);
+}}}</pre>
+            <h3><b>Rules</b></h3>
+                <span class="flow-text left-align thin">
+1)You may code in C or Java only.<br>
+            2)You may participate as team of two or alone. <br>
+            3)The decision of the coordinators is final.<br>
+                </span>
+            <br>
+
+            </p>
+        </div>
+        <div id="test7" class="col s12">
+            <br>
+            <h3 class="text-center">COGNITION QUEST</h3>
+            <p class="flow-text left-align thin"><br>
+Do you ponder upon intricacies while learning about technology? Do you search for solutions to the problems of this gadget dependent world? Do you dream of joining that elite league of the innovators? If so, then collate your ideas into a presentation, collaborate with a like minded person and come showcase it at Interrupt! 
+                
+<br>
+                <br><b>Topics</b><br>
+                - Embedded systems<br>
+                - Computer Networks    <br>
+                - Artificial intelligence  <br>
+                - Big data     <br>
+                - Internet of things<br>
+                - Cloud computing      <br>
+                - Image processing      <br>
+                - Other computer science related topics<br>
+                <br><b>Rules</b><br>
+            1.Maximum number of participants in a team is 3.<br>
+                2. It is advisable that the paper presentation focuses on one particular topic.<br>
+                3. Abstract should not exceed 80 words. Paper should not exceed 600 words but should have minimum of 450 words.<br>
+                4. Paper should be in IEEE format.<br>
+                5. Paper should be submitted as a word document (.doc,.docx,.odt) or pdf.<br>
+                6. Plagiarism is strictly prohibited.<br>
+                7. Bring your PowerPoint presentation in a pen drive.<br>
+                8. Mail your abstract and full paper to <b>svcepapier2k16@gmail.com</b> on or before <b>25/09/2016</b>.<br>
+                9. Confirmation mail will be sent to the selected papers on <b>28/09/2016</b>.<br>
+                10. Selected candidates should bring two hardcopies of paper.<br>
+                11. The teams will get minimum of 7 minutes and maximum of 10 minutes for presentation followed by question and answer.<br>
+                12. Team can register for only one paper.<br>
+                13. The submission should contain:<br>
+                - Title-theme of the paper.<br>
+                -Name of both participants.<br>
+                -phone number of both the authors.<br>
+                - E-mail ID.<br>
+                14. Shortlisted papers will be notified through mail.<br>
+
+            </p>
+        </div>
+        <div id="test8" class="col s12">
+            <br>
+            <h2 class="text-center">PICTURESQUE</h2>
+            <p class="flow-text left-align thin">
+                An Online Photography Contest<br>
+<span class="text-center">__________</span> <br>
+So here you go,<br>
+You need to inbox your images to the INTERRUPT'16 page with your name , college , contact no.<br>
+All your clicks will be judged only by the juries and not by likes or shares, as likes count cant filter talents..<br><br>
+                <b>Round 1</b><br>
+                    Theme is open for the first round.(impress us with your skills)<br><br>
+                <b>Round 2</b><br>
+                Shortlisted participants will be given a new theme.<br><br>
+
+            <b>Rules</b><br>
+1.Only one picture is allowed for one participant<br>
+2.If you are sending edited pictures, attach the raw pic also and send<br>
+3.With the picture, include your name , college and contact.<br>
+                4.The decision of the judges will be final.<br>
+                5. only college students may participate<br>
+                6. the winner must be present at the venue on the day of symposium to collect the prize if not the prize will be given to the next position. Prizes will NOT be couriered or transferred.<br>
+
+                <br><br>
+For further details<br>
+Contact <br>
+Praveen babu (9444903595)<br>
+<br>
+Get ready to twist...<br>
+            </p>
+        </div>
+        <div id="test9" class="col s12">
+            <br>
+            <h2 class="text-center">QUIZZLER</h2>
+            <p class="flow-text left-align thin">
+
+
+The quintessential geek is defined by thick, round glasses and usage of long terms like "Non co-operative oligopolistic equilibrium." Sound familiar?
+<br>
+Are you willing to fight it out in a buzzer-induced frenzy? Are you ready to be questioned on anything under the cloud? (Pun intended!)
+We expect you to bring your A game to Quizzler this year!
+<br><br>
+            <b>Event Structure</b>
+<br>
+Gladiators entering the Quizzler arena will be faced with six types of questions:<br>
+ 1)	Connections<br>
+ 2)	4pics 1 word<br>
+ 3)	Scramble<br>
+ 4)	Label writing<br>
+ 5)	5 clues 1 word<br>
+ 6)	Quote the Quote.<br>
+</span>
+
+
+            <br>
+            <span class="flow-text left-align thin">
+            <b>Rules</b><br>
+            1)The decision of the judges will be final.<br>
+            2)Only college students may participate. <br>
+            3)The winner must be present at the venue on the day of symposium to collect the prize if not the prize will be given to the next position. Prizes will NOT be couriered or transferred.<br>
+            <br>
+</span>
+
+
+
+
+
+            </p>
+        </div>
+
+    </div>
+</div>
+
+
+
+<script>
+
+</script>
+
+</body>
+</html>
